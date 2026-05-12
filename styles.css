@@ -206,6 +206,8 @@ textarea {
   width: 100%;
   flex: 1;
   resize: none;
+  overflow: auto;
+  white-space: pre;
   border: 0;
   padding: 20px;
   color: #20342d;
