@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Properties ⇄ YAML Converter</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="hero">
+        <div>
+          <p class="eyebrow">Config Transformer</p>
+          <h1>Properties ⇄ YAML</h1>
+          <p class="summary">面向 Spring / DevOps 配置整理的双向转换工作台，输入、转换、校验一次完成。</p>
+        </div>
+        <div class="hero-actions">
+          <button id="loadSample" class="ghost-button" type="button">填充示例</button>
+          <button id="swapContent" class="ghost-button" type="button">左右交换</button>
+        </div>
+      </section>
+
+      <section class="toolbar" aria-label="转换操作">
+        <button id="toYaml" class="primary-button" type="button">Properties → YAML</button>
+        <button id="toProperties" class="primary-button secondary" type="button">YAML → Properties</button>
+        <p id="status" class="status" role="status">准备就绪</p>
+      </section>
+
+      <section class="workspace">
+        <article class="panel">
+          <header class="panel-header">
+            <div>
+              <h2>Properties</h2>
+              <span>.properties / key=value</span>
+            </div>
+            <div class="panel-actions">
+              <button id="copyProperties" type="button">复制</button>
+              <button id="clearProperties" type="button">清空</button>
+            </div>
+          </header>
+          <textarea id="propertiesInput" spellcheck="false" aria-label="Properties 输入"></textarea>
+        </article>
+
+        <article class="panel">
+          <header class="panel-header">
+            <div>
+              <h2>YAML</h2>
+              <span>.yml / nested config</span>
+            </div>
+            <div class="panel-actions">
+              <button id="copyYaml" type="button">复制</button>
+              <button id="clearYaml" type="button">清空</button>
+            </div>
+          </header>
+          <textarea id="yamlInput" spellcheck="false" aria-label="YAML 输入"></textarea>
+        </article>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
